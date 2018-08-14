@@ -39,10 +39,11 @@ def chord():
 @app.route('/model')
 def model():
 
-    with open('static/data/model-data.json') as filename:
-        modelData = json.load(filename)
+    #with open('static/data/model-data.json') as filename:
+    #    modelData = json.load(filename)
 
-    return (jsonify(modelData)) 
+    #return (jsonify(modelData)) 
+    return send_file('static/data/model-data.json', mimetype = 'application/json')
 
 #run the app
 if __name__ == '__main__':

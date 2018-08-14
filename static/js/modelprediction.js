@@ -4,6 +4,8 @@ var $submitBtn = document.querySelector("#submit");
 // When the submit button is clicked, call the handleSubmitClick function
 $submitBtn.addEventListener("click", handleSubmitClick);
 
+//var data = dataSet;
+
 function handleSubmitClick(event) {
   
   // The default behavior of a button clicked inside of a form is to try to submit the form somewhere (which we don't want)
