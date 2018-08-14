@@ -4,7 +4,7 @@ Plotly.d3.json("/chord", function(error, response) {
   const titles = ['Atlantic', 'BBC', 'MotherJones', 'NewRepublic', 'Politico', 'Slate', 'DailyBeast', 'Guardian', 'Intercept', 'WashPost', 'AmerCons', 'Breitbart', 'DailyWire', 'Economist', 'FiscalTimes', 'FoxNews', 'NYPost', 'Reason', 'Hill', 'WashTimes'];
   
   // List of site names to show in chord diagram
-  const fullNames = ['Atlantic', 'BBC', 'Mother Jones', 'New Republic', 'Politico', 'Slate', 'Daily Beast', 'Guardian', 'Intercept', 'Washington Post', 'American Cons', 'Breitbart', 'Daily Wire', 'Economist', 'Fiscal Times', 'Fox News', 'NY Post', 'Reason', 'The Hill', 'Washington Times'];
+  const fullNames = ['Atlantic', 'BBC', 'Mother \n Jones', 'New \n Republic', 'Politico', 'Slate', 'Daily Beast', 'Guardian', 'Intercept', 'Washington \n Post', 'American \n Conservative', 'Breitbart', 'Daily Wire', 'Economist', 'Fiscal \n Times', 'Fox News', 'NY Post', 'Reason', 'The Hill', 'Washington \n Times'];
   
   // Blank list used for chord diagram
   let seriesList = [];
