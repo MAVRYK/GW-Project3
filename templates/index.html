@@ -271,7 +271,7 @@
 
   <section id='wordcloud' class='white-section'>
     <figure class="model">
-      <img src="{{ url_for('static', filename='img/left-bias.png')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
+      <img src="{{ url_for('static', filename='img/left-bias.PNG')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
       <!-- <img src="../static/img/right-bias.PNG" alt="right bias bar chart" style="height:35rem;width:35rem;"> -->
     </figure>
     <article>
@@ -286,7 +286,7 @@
   <section id='wordcloud' class='white-section'>
     <figure class="model">
       <!-- <img src="../static/img/left-bias.PNG" alt="left bias bar chart" style="height:35rem;width:35rem;"> -->
-      <img src="{{ url_for('static', filename='img/right-bias.png')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
+      <img src="{{ url_for('static', filename='img/right-bias.PNG')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
     </figure>
     <article>
       <!-- <h2 class="text-center">Right Bias</h2> -->
@@ -468,9 +468,10 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
   <!-- Custom plots -->
+  <script src="{{ url_for('static', filename='js/modelprediction.js') }}"></script>
   <script src="{{ url_for('static', filename='js/chord.js') }}"></script>
   <script src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
-
+  
   <!-- Map Section -->
   <div id="map"></div>
 
@@ -509,6 +510,7 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script> -->
 
   <!-- javascript files   -->
+  
   <!-- <script type="text/javascript" src="../static/js/index.js"></script>
   <script type="text/javascript" src="../static/js/word_cloud.js"></script>
   <script type="text/javascript" src="../static/js/boxplot.js"></script>
