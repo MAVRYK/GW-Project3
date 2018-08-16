@@ -226,6 +226,8 @@ body {
   }
   footer {
     padding: 50px 0;
+    background-color: black;
+    
   }
   
   footer p {
@@ -270,6 +272,20 @@ body {
     height: 520px;
     width: 100%;
   }
+  form #submit {
+    background-color: blueviolet;
+    outline-color: blueviolet;
+    margin-left: 45%;
+
+  }
+  #submit:hover {
+    opacity: 1; 
+  }
+  .card-deck {
+    width: 100%;
+ 
+  }
+  
   
   /* .white-section {
     display: table;
