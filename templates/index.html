@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -519,3 +520,527 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="News Media Analysis">
+  <meta name="author" content="Group of concerned citizens">
+  <title>Exploring the Divide</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+  <!-- Script for chord chart -->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+  <!-- Custom fonts for this template -->
+  <!-- <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">PuddleNet</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Visuals
+            </a>
+            <div class="dropdown-menu gray-bg" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
+              <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
+              <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
+              <a class="dropdown-item js-scroll-trigger" href="#textEnter">Check your source</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Intro Header -->
+  <header class="masthead" id="top">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h1 class="brand-heading">Exploring the Divide</h1>
+            <p class="intro-text">An analysis of the differences in left and right leaning news media sources
+            <p>Created by Captain Bouncy, Rodney, Boss, <br>Doom Unicorn, The Wrangler &amp; Co.</p>
+              <!-- <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a> -->
+          </div>
+          <!-- <div class="col-lg-6 mx-auto">
+            <img src="http://media.nj.com/hudson_voices_impact/photo/firstjpg-e58a5d80f7e01bfc.jpg">
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
+          <h2>About PuddleNet</h2>
+          <p class="text-left">PuddleNet&mdash;it was to be our answer to a question we had not yet found. This project started with a desire
+            to understand the political climate and the language being consumed by the masses. We wanted to be explorers
+            of a polarized lexicon that seemed to be dividing this country.</p>
+          <p class="text-left">As our project unfolded, we identified 20 sources from which to gather language. We chose an equal number of popular
+            left- and right-leaning news media sites to scrape, and began our process of gathering human thought that has
+            been recorded in sentences.</p>
+          <p class="text-left">As the data began rolling in, millions of words per site, we needed to find a way to start making sense of it all.
+            We chose a two-pronged approach. First, we would begin grouping and inspecting to look for patterns, find relationships,
+            further direct our exploration. Second, we we wanted a machine learning model to learn what left- or right-leaning
+            text would look like so that we could use it to identify political leanings of a text, or even build text blocks
+            with perspective.</p>
+          <p class="text-left">And so we got to work...</p>
+          <!-- <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
+            <i class="fa fa-angle-double-down animated"></i>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <!-- Plots Section -->
+  <section id='wordcloud' class='white-section'>
+    <figure class="cloud">
+      <img src="{{ url_for('static', filename='img/AllCombined.png')}}" alt="all combined wordcloud" style="height:500px;width:991px;">
+      <!-- <img src="../static/img/L-All.png" alt="all left wordcloud" style="height:440px;width:405px">
+      <img src="../static/img/R-All.png" alt="all right wordcloud" style="height:440px;width:405px"> -->
+    </figure>
+    <article>
+    <!-- <div class="container mx-auto">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 mx-auto"> -->
+          <h2 class="text-center">Lexicography</h2>
+          <!-- <div class="row"> -->
+          <p><br></p>  
+          <p>This word cloud displays the words that show up the most often across every site we looked at.
+            Words that appear more frequently are larger than words that don't appear as often.</p>
+          <p><br></p>
+          <!-- </div>
+        </div>
+      </div>
+    </div> -->
+    </article> 
+  </section> 
+  <!-- <section> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <form>
+          <div class="form-group">
+            <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+          </div>
+          <div class="form-group">
+            <figure class="figure" id="first-image"></figure>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <form>
+          <div class="form-group">
+            <select class="form-control" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+          </div>
+          <div class="form-group">
+            <figure class="figure" id="second-image"></figure>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- </section> -->
+    <!-- <div class="container text-center">
+      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="boxplot" class="white-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container">
+          <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+            <h2 class="text-center">Article Anatomy</h2>
+            <p class="text-left">This simplest possible box plot displays the full range of variation (from min to max), the likely range of variation
+              (first and third quartile), and a typical value (the median). Upper and Lower Fences help identify outliers
+              in the data set. In short, the box plot provides a simple visual of the dimensions of the data.</p>
+            <p class="text-left">Our box plots were very insightful. We noticed almost immediately that the article anatomies were very different.
+              Liberal media tended to have longer articles by nearly twice as many words, on average, than the Conservative
+              Media. This began to explain some of the disparity between the word clouds, but we simply needed more information.</p>
+            <p class="text-left">We wanted to explore why longer articles that clearly had more information, seemed to not be heard as loudly
+              in the political arena.</p>
+            <p class="text-left">And so we looked for a way to visualize the interconnectedness of the sites, to see if there was a proportionate
+              flow between the sides...</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="container col-sm-12 col-md-12 col-lg-12">
+              <h3 class="text-center pt-5 pb-0">Left-leaning Media</h3>
+              <div class="svg-container pt-0" id="leftDiv"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="container col-sm-12 col-md-12 col-lg-12">
+              <h3 class="text-center pt-5 pb-0">Right-leaning Media</h3>
+              <div class="svg-container pt-0" id="rightDiv"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+        <!-- <div class="container text-center">
+        <a href="#chord" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <section>
+    <figure class="chord">
+      <div class="svg-container text-center" id='chordChart' style='height:75rem;width:65rem;'>
+        <!-- <h2 class="text-center">Crossing the Divide</h2> -->
+      </div>
+    </figure>
+    <article>
+    <!-- <div class="container-fluid">
+      <div class="col-sm-12 col-md-8 col-lg-6 mx-auto"> -->
+      <p><br></p>
+      <p>This chord diagram shows the connectedness between sites.  
+        Each arc represents an instance of one site linking to another; the thicker the arc, the greater the number of links.</p>
+      <p>Washington Post and Politico are two sites that others frequently link to.
+        Hovering over the edge of the circle for either of those sites, you'll see a number of "thick" bands coming from other sites</p>
+      <p><br></p>
+    </article>
+  </section>
+      <!-- <div class="row">
+        <div class="container col-sm-12 col-md-12 col-lg-12">
+          <div class="svg-container text-center" id='chordChart' style='height:50rem;width:50rem;'></div>
+        </div>
+      </div> -->
+    <!-- </div>
+  </section> -->
+
+  <!--Map Section-->
+  <div class="container iframe">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="brand-heading text-center">Country Mentions by Right Sites</h1>
+        <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/67dc0431-fd24-4cc2-9476-ca73dfdfdc07/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="brand-heading text-center">Country Mentions by Left Sites</h1>
+        <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/81b0b3c6-a0ca-4a77-becf-257e21052f08/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="row"><br></div>
+  
+  <!--Bar Chart Section-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- <h1 class="brand-heading text-center">Site Bias by Headline Phrase</h1> -->
+      </div>
+    </div>
+  </div> 
+
+  <section id='wordcloud' class='white-section'>
+    <figure class="model">
+      <img src="{{ url_for('static', filename='img/left-bias.png')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
+      <!-- <img src="../static/img/right-bias.PNG" alt="right bias bar chart" style="height:35rem;width:35rem;"> -->
+    </figure>
+    <article>
+      <!-- <h2 class="text-center">Left Bias</h2> -->
+      <p><br></p>
+      <p><h3>Left Site Bias by Headline Phrase:  </h3>These are some of the phrases that resulted in a high probability that site's bias is Left leaning.</p>
+      <p>Immigration is one of the more popular issues mentioned in Left headlines</p>
+      <p><br></p>
+    </article> 
+  </section>
+
+  <section id='wordcloud' class='white-section'>
+    <figure class="model">
+      <!-- <img src="../static/img/left-bias.PNG" alt="left bias bar chart" style="height:35rem;width:35rem;"> -->
+      <img src="{{ url_for('static', filename='img/right-bias.png')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
+    </figure>
+    <article>
+      <!-- <h2 class="text-center">Right Bias</h2> -->
+      <p><br></p>
+      <p><h3>Right Site Bias by Headline Phrase:  </h3>Here are some of the phrases that were likely coming from Right sites<br>
+      <p>Immigration is also an issue for Right sites, but notice the different terminology used (Right: Illegal Immigrant vs Left: Undocumented Immigrant)</p>
+      <p><br></p>
+    </article> 
+  </section>
+  <!--<div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-8 mx-auto pt-5">
+          <h1 class="text-center">Conclusion?</h1>
+          <p>Our exploration of the media lexicon has taught us 4 very important lessons:</p>
+          <ol>
+            <li>Starting the adventure without knowing the destination leads you to better discoveries than knowing where you
+              want to be, and hacking your way to the end.</li>
+            <li>When taken one at a time, the data is not that informative, but following the threads and stitching a story together
+              is better way to find truth, and not just a visualization</li>
+            <li>The truth that we found is: Short, hyper-focused, political, hot-button titles will dominate the media over structured,
+              logical, and factual argument and variety.</li>
+            <li>Machine Learning is utterly awesome, yet exceedingly difficult to master.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="container text-center">
+        <a href="#textEnter" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <!--Bias Predictor Section-->
+  <section class="content-section" id="textEnter">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="brand-heading text-center">Site Bias Predictor</h1>
+            <p class="intro-text">Enter a word or phrase in the box below and our model with determine the probability that the site is left or right leaning:</p>
+            <form>
+                <div class="form-group">
+                    <!-- <label for="phrase">Enter word/phrase to search:</label> -->
+                    <input type="text" class="form-control" id="phrase">
+                </div>
+                  <button id="submit" class="btn btn-success right">Submit</button>
+                  <!-- <h2>Model prediction: <br> <span></span></h2> -->
+                  <!-- add in thinky dots -->
+                  <h3><span></span></h3>
+                
+                  <!-- Custom plots -->
+                  <script src="{{ url_for('static', filename='js/modelprediction.js') }}"></script>
+            </form>
+            <div class="text-center">
+              <!-- <a href="#team" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="white-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars0.githubusercontent.com/u/26147020?s=400&v=4" alt="Vanessa">
+            <div class="card-body">
+              <h5 class="card-title">Vanessa Van Gilder</h5>
+              <p class="text-muted">aka Captain Bouncy</p>
+              <!-- <p class="card-text">Lead Infringement Specialist at Funimation (A Sony Pictures Television Company)</p> -->
+              <a href="https://github.com/VanessaVanG" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/35657984?s=400&v=4" alt="Spencer">
+            <div class="card-body">
+              <h5 class="card-title">Spencer Rand</h5>
+              <p class="text-muted pt-0">aka Rodney</p>
+              <!-- <p class="card-text">Asset Management Associate at Monument Wealth Management -->
+                <br>
+                <br> </p>
+              <a href="https://github.com/spencerrand" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/10793093?s=400&v=4" alt="Mike">
+            <div class="card-body">
+              <h5 class="card-title">Mike Hager</h5>
+              <p class="text-muted pt-0">aka Boss</p>
+              <!-- <p class="card-text">Manager at Deloitte Consulting -->
+                <br>
+                <br>
+                <br> 
+              </p>
+              <a href="https://github.com/mhager3" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
+            <div class="card-body">
+              <h5 class="card-title">Yegor Kryukov</h5>
+              <p class="text-muted pt-0">aka Co</p>
+              <!-- <p class="card-text">E-commerce and data-oriented entrepreneur -->
+                <br>
+                <br> 
+                <br>
+              </p>
+              <a href="https://github.com/yegorkryukov" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="static/img/DoomUnicorn.jpg" alt="Kellie">
+            <div class="card-body">
+              <h5 class="card-title">Kellie Shontz</h5>
+              <p class="text-muted pt-0">aka Doom Unicorn</p>
+              <!-- <p class="card-text">Process Coordinator &amp; Data Analyst at Advanced Powder Products Inc. -->
+                <br>
+              </p>
+              <a href="https://github.com/kelbar13" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-2">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/20982824?s=400&v=4" alt="Anna">
+            <div class="card-body">
+              <h5 class="card-title">Anna Riehle</h5>
+              <p class="text-muted pt-0">aka The Wrangler</p>
+              <!-- <p class="card-text">Student in MS in Analytics Program at Georgia Institute of Technology -->
+                <br> 
+              </p>
+              <a href="https://github.com/AMRiehle" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div> <!--Row-->
+      
+      <div class="text-center container pt-5">
+        <!-- <a href="#page-top" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-up animated"></i> -->
+        <!-- </a> -->
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Plotly library-->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Custom plots -->
+  <script src="{{ url_for('static', filename='js/modelprediction.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chord.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
+
+  <!-- Map Section -->
+  <div id="map"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>Copyright &copy; 2018</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+
+  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script> -->
+
+  <!-- Custom scripts for this template -->
+  <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script> -->
+
+  <!--for testing outside of flask app-->
+  <!-- d3 -->
+  <script src='https://d3js.org/d3.v3.min.js'></script>
+  <!-- Plotly library -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- scrollama -->
+<!-- <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
+  <script src='https://unpkg.com/scrollama'></script> -->
+  <!-- Plugin JavaScript -->
+  <!-- <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script> -->
+
+  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script> -->
+
+  <!-- javascript files   -->
+  <!-- <script type="text/javascript" src="../static/js/index.js"></script>
+  <script type="text/javascript" src="../static/js/word_cloud.js"></script>
+  <script type="text/javascript" src="../static/js/boxplot.js"></script>
+  <script type="text/javascript" src="../static/js/grayscale.js"></script>
+  <script type="text/javascript" src="../static/js/chord.js"></script> -->
+
+</body>
+
+</html>
+>>>>>>> kellie
