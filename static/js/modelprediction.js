@@ -1,3 +1,20 @@
+// moving dots when searching
+// window.dotsGoingUp = true;
+//     var dots = window.setInterval( function() {
+//         var wait = document.getElementById("wait");
+//         if ( window.dotsGoingUp ) 
+//             wait.innerHTML += ".";
+//         else {
+//             wait.innerHTML = wait.innerHTML.substring(1, wait.innerHTML.length);
+//             if ( wait.innerHTML === "")
+//                 window.dotsGoingUp = true;
+//         }
+//         if ( wait.innerHTML.length > 9 )
+//             window.dotsGoingUp = false;
+
+
+
+//         }, 100);
 // Getting references to the input fields, button, and lists
 var $submitBtn = document.querySelector("#submit");
 
@@ -13,7 +30,7 @@ function handleSubmitClick(event) {
   d3.select("h2>span").text("");
 
   // Add notice to show user that program is searching for text
-  d3.select("h3>span").text("Searching...");
+  d3.select("h3>span").text("Searching");
 
   // Call Flask app
   Plotly.d3.json("/model", function(error, response) {
