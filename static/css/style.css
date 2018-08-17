@@ -227,6 +227,8 @@ body {
   }
   footer {
     padding: 50px 0;
+    background-color: black;
+    
   }
   
   footer p {
@@ -235,24 +237,24 @@ body {
   }
   
   ::-moz-selection {
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
+    background: lightblue;
+    /* background: rgba(255, 255, 255, 0.2); */
     text-shadow: none;
   }
   
   ::selection {
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
+    background: lightblue;
+    /* background: rgba(255, 255, 255, 0.2); */
     text-shadow: none;
   }
   
-  img::selection {
+  /* img::selection {
     background: transparent;
   }
   
   img::-moz-selection {
     background: transparent;
-  }
+  } */
   
   .img-big {
     position: relative;
@@ -271,6 +273,21 @@ body {
     height: 520px;
     width: 100%;
   }
+  #submit {
+    
+    background-color: black;
+    border-color: black;
+    font-size: 14px;
+    color: white;
+    margin-left: 42%;
+
+  }
+  #submit:hover {
+    background: gray;
+    color: black; 
+  }
+  
+
   
   /* .white-section {
     display: table;
