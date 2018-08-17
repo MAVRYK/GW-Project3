@@ -13,7 +13,7 @@ h6 {
     font-weight: 700;
     margin: 0 0 20px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 a {
   color: white;
@@ -34,11 +34,11 @@ p {
     }
   }
 
-body {
-    background-color: white;
-    /* margin: 3rem auto; */
-    max-width: 100%;
-  }
+/* body { */
+    /* background-color: white; */
+    margin: 3rem auto;
+    /* max-width: 100%; */
+  /* } */
   
   h1 {
     text-align: center;
@@ -210,9 +210,9 @@ body {
   }
   
   #chordChart {
-    height:75%;
-    width:75%;
-    min-height:900px;
+    /* height:75%; */
+    /* width:75%; */
+    /* min-height:900px; */
     position: sticky;
 }
 #map {
@@ -230,7 +230,7 @@ body {
     }
   }
   footer {
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: grey;
     
   }

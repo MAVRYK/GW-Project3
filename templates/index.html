@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Exploring The Divide">
-  <meta name="author" content="Group of concerned citizens">
+  <meta name="author" content="MAVRYK">
   <title>Exploring The Divide</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
@@ -85,7 +85,7 @@
               <a href = "https://www.linkedin.com/in/spencer-rand/" target="_blank">Spencer Rand</a>,
               <a href = "https://www.linkedin.com/in/kellie-shontz-21b41496/" target="_blank">Kellie Shontz</a>,<br>
               <a href = "https://www.linkedin.com/in/anna-riehle/" target="_blank">Anna Riehle</a>, 
-              <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a> and 
+              <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a>, and 
               <a href = "https://mindthatdata.com/" target="_blank">Yegor Kryukov</a></p>
               <!-- <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
@@ -136,11 +136,11 @@
       </div>
     </div>
   </div>
+  <hr>
   <!-- chord diagram -->
   <section>
-    <figure class="chord mx-auto">
-      <div class="svg-container mx-auto" id='chordChart' style='height:75rem;width:65rem;'>
-        <!-- <h2 class="text-center">Crossing the Divide</h2> -->
+    <figure class="chord">
+      <div class="svg-container mx-auto" id='chordChart'>
       </div>
     </figure>
     <article>
@@ -155,30 +155,32 @@
     </article>
   </section>
       
-
+  <hr>
   <!--Map Section-->
   <div class="container iframe">
+
     <div class="row">
+      <h2 class="col-lg-12 text-center mt-2 mb-4">Top 70 Country Mentions</h2>
       <div class="col-lg-6">
-        <h2 class="text-center">Country Mentions by<br>Right Sites</h2>
+        <!-- <h2 class="text-center">Country Mentions by<br>Right Sites</h2> -->
         <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/67dc0431-fd24-4cc2-9476-ca73dfdfdc07/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
     <!-- </div>
     <div class="row"><br></div>
     <div class="row"> -->
       <div class="col-lg-6">
-        <h2 class="text-center">Country Mentions by<br>Left Sites</h2>
+        <!-- <h2 class="text-center">Country Mentions by<br>Left Sites</h2> -->
         <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/81b0b3c6-a0ca-4a77-becf-257e21052f08/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
     </div>
   </div> 
   
-  <div class="row"><br><p></p></div>
-  
+  <!-- <div class="row"><br><p></p></div> -->
+  <hr>
   <!--Bar Chart Section-->
   <section id='barleft' class='white-section'>
-    <figure class="model">
-      <img src="{{ url_for('static', filename='img/left-bias.PNG')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
+    <figure class="model mt-2">
+      <img src="{{ url_for('static', filename='img/Left-Headlines.png')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
     </figure>
     <article>
       <!-- <h2 class="text-center">Left Bias</h2> -->
@@ -192,7 +194,7 @@
   <section id='barright' class='white-section'>
     <figure class="model">
       <!-- <img src="../static/img/left-bias.PNG" alt="left bias bar chart" style="height:35rem;width:35rem;"> -->
-      <img src="{{ url_for('static', filename='img/right-bias.PNG')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
+      <img src="{{ url_for('static', filename='img/Right-Headlines.png')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
     </figure>
     <article>
       <!-- <h2 class="text-center">Right Bias</h2> -->
@@ -203,7 +205,7 @@
       <!-- <p><br></p> -->
     </article> 
   </section>
-  
+  <hr>
   <!--Bias Predictor Section-->
   <section class="content-section" id="textEnter">
     <div class="intro-body">
@@ -228,14 +230,15 @@
       </div>
     </div>
   </section>
-
+  <hr>
   <section id="team" class="white-section">
-    <div class="card-deck col-md-12">
+    <div class="card-deck col-md-12 mt-3">
         
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://avatars0.githubusercontent.com/u/26147020?s=400&v=4" alt="Vanessa">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/Vanessa.png') }}" alt="Vanessa">
         <div class="card-body text-center">
           <h6 class="card-title">Vanessa Van Gilder</h6>
+          <a href="https://VanessaVanG.com" target="_blank"><img src="{{ url_for('static', filename='img/website.png') }}"></a>
           <a href ="https://www.linkedin.com/in/vanessa-van-gilder/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
           <a href = "https://github.com/VanessaVanG" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
         </div>
@@ -282,6 +285,7 @@
         <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
         <div class="card-body text-center">
           <h6 class="card-title">Yegor Kryukov</h6>
+          <a href="https://mindthatdata.com/" target="_blank"><img src="{{ url_for('static', filename='img/website.png') }}"></a>
           <a href ="https://www.linkedin.com/in/ykryukov/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
           <a href = "https://github.com/yegorkryukov" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
         </div>
@@ -300,10 +304,16 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container text-center">
-      <a href="https://github.com/MAVRYK/GW-Project3.git">GitHub</a>
-      <p>Copyright &copy; 2018</p>
-    </div>
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col-6">
+          <a class="ml-4" href="https://github.com/MAVRYK/GW-Project3.git">GitHub Repository</a>
+        </div>
+        <div class="col-6">
+          <h6 class="text-right mr-4">&copy; Copyright 2018</h6>
+        </div>
+      </div>
+    <!-- </div> -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
