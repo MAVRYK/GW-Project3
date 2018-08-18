@@ -17,17 +17,16 @@
   </script>
 
   <!-- Bootstrap core CSS -->
-  <!-- <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
   <!-- Custom fonts for this template -->
   <!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
@@ -37,40 +36,6 @@
 </head>
 
 <body id="page-top">
-
-  <!-- Navigation -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">PuddleNet</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Visuals
-            </a>
-            <div class="dropdown-menu gray-bg" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
-              <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
-              <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
-              <a class="dropdown-item js-scroll-trigger" href="#textEnter">Check your source</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
 
   <!-- Intro Header -->
   <header class="masthead" id="top">
@@ -87,16 +52,11 @@
               <a href = "https://www.linkedin.com/in/anna-riehle/" target="_blank">Anna Riehle</a>, 
               <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a>, and 
               <a href = "https://mindthatdata.com/" target="_blank">Yegor Kryukov</a></p>
-              <!-- <a href="#about" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
-              </a> -->
           </div>
         </div>
       </div>
     </div>
   </header>
-
-  
 
   <!-- Plots Section -->
   <section id='wordcloud' class='white-section'>
@@ -104,11 +64,9 @@
       <img src="{{ url_for('static', filename='img/AllCombined.png')}}" alt="all combined wordcloud" style="height:500px;width:991px;">
     </figure>
     <article>
-      
       <p><br></p>  
       <p><h2 class="text-center">Lexicography</h2>This word cloud displays the words that show up the most often across every site we looked at.
         Words that appear more frequently are larger than words that don't appear as often.</p>
-      
       <p><br></p>
     </article> 
   </section> 
@@ -144,8 +102,6 @@
       </div>
     </figure>
     <article>
-    <!-- <div class="container-fluid">
-      <div class="col-sm-12 col-md-8 col-lg-6 mx-auto"> -->
       <p><br></p>
       <p><h2 class="text-center">Crossing the Divide</h2>This chord diagram shows the connectedness between sites.  
         Each arc represents an instance of one site linking to another; the thicker the arc, the greater the number of links.</p>
@@ -157,25 +113,18 @@
       
   <hr>
   <!--Map Section-->
-  <div class="container iframe">
-
+  <div class="container-fluid iframe">
     <div class="row">
       <h2 class="col-lg-12 text-center mt-2 mb-4">Top 70 Country Mentions</h2>
       <div class="col-lg-6">
-        <!-- <h2 class="text-center">Country Mentions by<br>Right Sites</h2> -->
         <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/67dc0431-fd24-4cc2-9476-ca73dfdfdc07/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
-    <!-- </div>
-    <div class="row"><br></div>
-    <div class="row"> -->
       <div class="col-lg-6">
-        <!-- <h2 class="text-center">Country Mentions by<br>Left Sites</h2> -->
         <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/81b0b3c6-a0ca-4a77-becf-257e21052f08/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
     </div>
   </div> 
   
-  <!-- <div class="row"><br><p></p></div> -->
   <hr>
   <!--Bar Chart Section-->
   <section id='barleft' class='white-section'>
@@ -183,8 +132,6 @@
       <img src="{{ url_for('static', filename='img/Left-Headlines.png')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
     </figure>
     <article>
-      <!-- <h2 class="text-center">Left Bias</h2> -->
-      <!-- <p><br></p> -->
       <p><h2 class="text-center">Left Bias</h2>These are some of the phrases that resulted in a high probability that site's bias is Left leaning.</p>
       Immigration is one of the more popular issues mentioned in Left headlines</p>
       <!-- <p><br></p> -->
@@ -210,6 +157,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h1 class="brand-heading text-center">Site Bias Predictor</h1>
+            <p class="intro-text">We created a machine learning model and taught it the difference between left and right leaning sites using article headlines.</p>
             <p class="intro-text">Enter a word or phrase in the box below and our model will estimate the probability that the site is left or right leaning:</p>
             <form>
               <div class="form-group">
@@ -311,26 +259,14 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
-
-  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script> -->
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
   <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
 
   <!--for testing outside of flask app-->
   <!-- d3 -->
@@ -340,12 +276,6 @@
   <!-- scrollama -->
 <!-- <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
   <script src='https://unpkg.com/scrollama'></script> -->
-  <!-- Plugin JavaScript -->
-  <!-- <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script> -->
-
-  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script> -->
-
   
 </body>
 
