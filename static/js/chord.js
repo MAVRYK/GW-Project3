@@ -4,7 +4,7 @@ Plotly.d3.json("/chord", function(error, response) {
   const titles = ['Atlantic', 'MotherJones', 'NewRepublic', 'NYTimes', 'Politico', 'Slate', 'DailyBeast', 'Guardian', 'Intercept', 'WashPost', 'AmerCons', 'Breitbart', 'DailyWire', 'Economist', 'FiscalTimes', 'FoxNews', 'NYPost', 'Reason', 'Hill', 'WashTimes'];
   
   // List of site names to show in chord diagram
-  const fullNames = ['Atlantic', 'Mother \n Jones', 'New \n Republic', 'NY Times', 'Politico', 'Slate', 'Daily Beast', 'Guardian', 'Intercept', 'Washington \n Post', 'American \n Conservative', 'Breitbart', 'Daily Wire', 'Economist', 'Fiscal \n Times', 'Fox News', 'NY Post', 'Reason', 'The Hill', 'Washington \n Times'];
+  const fullNames = ['Atlantic', 'Mother \n Jones', 'New \n Republic', 'NY Times', 'Politico', 'Slate', 'Daily Beast', 'Guardian', 'Intercept', 'Washington \n Post', 'American \n Cons.', 'Breitbart', 'Daily Wire', 'Economist', 'Fiscal \n Times', 'Fox News', 'NY Post', 'Reason', 'The Hill', 'WashTimes'];
   
   // Blank list used for chord diagram
   let seriesList = [];
@@ -34,29 +34,29 @@ Plotly.d3.json("/chord", function(error, response) {
       "angle-padding": 1,
       "band-width": 10,
       "band-space": 1,
-      "radius": 200,
+      "radius": 235,
       "color-type": "palette",
       "palette": [
         "#1F45FC",
-        "#2B60DE",
+        "#7AA9DD",
         "#151B8D",
-        "#151B54",
-        "#2B547E",
-        "#737CA1",
+        "#C3E4ED",
+        "#00B2EE",
+        "#446689",
         "#3090C7",
-        "#5CB3FF",
-        "#A0CFEC",
-        "#C2DFFF",
-        "#800517",
-        "#9F000F",
-        "#C24641",
+        "#000080",
+        "#0276FD",
+        "#98F5FF",
+        "#CC1100",
+        "#EE799F",
+        "#E35152",
         "#E41B17",
-        "#CA226B",
-        "#F75D59",
-        "#E77471",
+        "#AF1E2D",
+        "#FF0066",
         "#FBBBB9",
-        "#E56E94",
-        "#FAAFBE"
+        "#FA1D2F",
+        "#FA8072",
+        "#551011"
       ],
       "style": {
         "chord": { "border-width": 0 },
@@ -67,7 +67,7 @@ Plotly.d3.json("/chord", function(error, response) {
           "bold": false,
           "font-size": "13px",
           "font-family": "arial",
-          "angle": 90,
+          "angle": 90
         }
       }
     },
@@ -79,7 +79,7 @@ Plotly.d3.json("/chord", function(error, response) {
   zingchart.render({
     id: 'chordChart',
     data: myConfig,
-    height: 700, 
+    height: 690, 
     width: 700 
   });
 

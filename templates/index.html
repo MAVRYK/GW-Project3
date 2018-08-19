@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -520,3 +521,287 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Exploring The Divide">
+  <meta name="author" content="MAVRYK">
+  <title>Exploring The Divide</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+  <!-- Script for chord chart -->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+  <!-- Custom fonts for this template -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Intro Header -->
+  <header class="masthead" id="top">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h1 class="brand-heading">Exploring the Divide</h1>
+            <h4>An analysis of the differences in<br>
+              <a href="static/img/media-bias-chart.jpg" target="_blank">left and right leaning news media</a></h4>
+            <p>Created by <a href = "https://VanessaVanG.com" target="_blank">Vanessa Van Gilder</a>,
+              <a href = "https://www.linkedin.com/in/spencer-rand/" target="_blank">Spencer Rand</a>,
+              <a href = "https://www.linkedin.com/in/kellie-shontz-21b41496/" target="_blank">Kellie Shontz</a>,<br>
+              <a href = "https://www.linkedin.com/in/anna-riehle/" target="_blank">Anna Riehle</a>, 
+              <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a>, and 
+              <a href = "https://mindthatdata.com/" target="_blank">Yegor Kryukov</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Plots Section -->
+  <section id='wordcloud' class='white-section'>
+    <figure class="cloud">
+      <img src="{{ url_for('static', filename='img/AllCombined.png')}}" alt="all combined wordcloud" style="height:500px;width:991px;">
+    </figure>
+    <article>
+      <p><br></p>  
+      <p><h2 class="text-center">Lexicography</h2>This word cloud displays the words that show up the most often across every site we looked at.
+        Words that appear more frequently are larger than words that don't appear as often.</p>
+      <p><br></p>
+    </article> 
+  </section> 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 text-center">
+        <form>
+          <div class="form-group">
+            <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+          </div>
+          <div class="form-group">
+            <figure class="figure" id="first-image"></figure>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 text-center">
+        <form>
+          <div class="form-group">
+            <select class="form-control" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+          </div>
+          <div class="form-group">
+            <figure class="figure" id="second-image"></figure>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- chord diagram -->
+  <section>
+    <figure class="chord">
+      <div class="svg-container mx-auto" id='chordChart'>
+      </div>
+    </figure>
+    <article>
+      <p><br></p>
+      <p><h2 class="text-center">Crossing the Divide</h2>This chord diagram shows the connectedness between sites.  
+        Each arc represents an instance of one site linking to another; the thicker the arc, the greater the number of links.</p>
+      <p>Washington Post and Politico are two sites that others frequently link to.
+        Hovering over the edge of the circle for either of those sites, you'll see a number of "thick" bands coming from other sites</p>
+      <p><br></p>
+    </article>
+  </section>
+      
+  <hr>
+  <!--Map Section-->
+  <div class="container-fluid iframe">
+    <div class="row">
+      <h2 class="col-lg-12 text-center mt-2 mb-4">Top 70 Country Mentions</h2>
+      <div class="col-lg-6">
+        <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/67dc0431-fd24-4cc2-9476-ca73dfdfdc07/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+      <div class="col-lg-6">
+        <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/81b0b3c6-a0ca-4a77-becf-257e21052f08/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <!--Bar Chart Section-->
+  <section id='barleft' class='white-section'>
+    <figure class="model mt-2">
+      <img src="{{ url_for('static', filename='img/Left-Headlines.png')}}" alt="left bias bar chart" style="height:35rem;width:35rem;">
+    </figure>
+    <article>
+      <p><h2 class="text-center">Left Bias</h2>These are some of the phrases that resulted in a high probability that site's bias is Left leaning.</p>
+      Immigration is one of the more popular issues mentioned in Left headlines</p>
+      <!-- <p><br></p> -->
+    </article> 
+  </section>
+
+  <section id='barright' class='white-section'>
+    <figure class="model">
+      <img src="{{ url_for('static', filename='img/Right-Headlines.png')}}" alt="right bias bar chart" style="height:35rem;width:35rem;">
+    </figure>
+    <article>
+      <p><h2 class="text-center">Right Bias</h2>
+      Here are some of the phrases that were likely coming from Right sites<br>
+      Immigration is also an issue for Right sites, but notice the different terminology used (Right: Illegal Immigrant vs Left: Undocumented Immigrant)</p>
+      <!-- <p><br></p> -->
+    </article> 
+  </section>
+  <hr>
+  <!--Bias Predictor Section-->
+  <section class="content-section" id="textEnter">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="brand-heading text-center">Site Bias Predictor</h1>
+            <p class="intro-text">We created a machine learning model and taught it the difference between left and right leaning sites using article headlines.</p>
+            <p class="intro-text">Enter a word or phrase in the box below and our model will estimate the probability that the site is left or right leaning:</p>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="phrase">
+              </div>
+                <button id="submit" class="btn btn-dark right">Submit</button>
+                <h2 style="margin-top: 10px;"><span></span></h2>
+                <!-- possible js id for moving dots on submit button click needs work -->
+                <!-- <span id="wait">.</span> -->     
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="team" class="white-section">
+    <div class="card-deck col-md-12 mt-3">
+        
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/Vanessa.png') }}" alt="Vanessa">
+        <div class="card-body text-center">
+          <h6 class="card-title">Vanessa Van Gilder</h6>
+          <a href="https://VanessaVanG.com" target="_blank"><img src="{{ url_for('static', filename='img/website.png') }}"></a>
+          <a href ="https://www.linkedin.com/in/vanessa-van-gilder/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/VanessaVanG" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/35657984?s=400&v=4" alt="Spencer">
+        <div class="card-body text-center">
+          <h6 class="card-title">Spencer Rand</h6>
+          <a href ="https://www.linkedin.com/in/spencer-rand/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/spencerrand" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+  
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/img/DoomUnicorn.jpg" alt="Kellie">
+        <div class="card-body text-center">
+          <h6 class="card-title">Kellie Shontz</h6>
+          <a href ="https://www.linkedin.com/in/kellie-shontz-21b41496/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/kelbar13" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+  
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/20982824?s=400&v=4" alt="Anna">
+        <div class="card-body text-center">
+          <h6 class="card-title">Anna Riehle</h6>
+          <a href ="https://www.linkedin.com/in/anna-riehle/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/AMRiehle" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/10793093?s=400&v=4" alt="Mike">
+        <div class="card-body text-center">
+          <h6 class="card-title">Mike Hager</h6>
+          <a href ="https://www.linkedin.com/in/mike-hager/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/mhager3" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+  
+      <!-- <div class="col-sm-2"> -->
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
+        <div class="card-body text-center">
+          <h6 class="card-title">Yegor Kryukov</h6>
+          <a href="https://mindthatdata.com/" target="_blank"><img src="{{ url_for('static', filename='img/website.png') }}"></a>
+          <a href ="https://www.linkedin.com/in/ykryukov/" target="_blank"><img src = "/static/img/In-Black-34px.png"></a>
+          <a href = "https://github.com/yegorkryukov" target="_blank"><img src = "static/img/GitHub-Mark-32px.png"></a>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div> <!--Row-->
+  </section>
+
+  <!-- Plotly library-->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Custom plots -->
+  <script src="{{ url_for('static', filename='js/chord.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modelprediction.js') }}"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <a class="ml-4" href="https://github.com/MAVRYK/GW-Project3.git">GitHub Repository</a>
+        </div>
+        <div class="col-6">
+          <h6 class="text-right mr-4">&copy; Copyright 2018</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+
+  <!--for testing outside of flask app-->
+  <!-- d3 -->
+  <script src='https://d3js.org/d3.v3.min.js'></script>
+  <!-- Plotly library -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- scrollama -->
+<!-- <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
+  <script src='https://unpkg.com/scrollama'></script> -->
+  
+</body>
+
+</html>
+>>>>>>> master
