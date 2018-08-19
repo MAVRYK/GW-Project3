@@ -142,14 +142,14 @@ p {
        rgba(0, 0, 0, 0.7), 
        rgba(0, 0, 0, 0.7) ),
        
-        url("https://image.ibb.co/k7JS8K/protest_small.jpg") no-repeat bottom center scroll;
+        url("https://image.ibb.co/mNejOK/protest_medium.jpg") no-repeat bottom center scroll;
     background-color: white;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: auto;
     background-size: auto;
   }
-  /* http://minnesotaconnected.com/wp-content/uploads/2014/02/Right-Wing-and-Left-Wing-Terms-Void-of-Denotation.png */
+  
   .masthead .intro-body {
     display: table-cell; 
     vertical-align: top; 
