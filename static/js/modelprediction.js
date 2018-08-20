@@ -30,7 +30,7 @@ function handleSubmitClick(event) {
   d3.select("h2>span").text("");
 
   // Add notice to show user that program is searching for text
-  d3.select("h2>span").text("Searching");
+  d3.select("h2>span").text("Searching .....");
 
   // Call Flask app
   Plotly.d3.json("/model", function(error, response) {
