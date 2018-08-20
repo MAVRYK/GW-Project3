@@ -1,42 +1,25 @@
-<!DOCTYPE html>
-<html>
+{% extends "index.html" %}
+{% block content %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="News Media Analysis">
-  <meta name="author" content="Group of concerned citizens">
-  <title>News Media Analysis</title>
-
-  <!-- Custom styles for this template -->
-  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-  <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
-</head>
-<body>
-    <!-- About Section -->
+<!-- About Section -->
     <section id="about" class="content-section text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
                     <h2>Our Process</h2>
-                    <p class="text-left">PuddleNet&mdash;it was to be our answer to a question we had not yet found. This project started with a desire
-                        to understand the political climate and the language being consumed by the masses. We wanted to be explorers
-                        of a polarized lexicon that seemed to be dividing this country.</p>
-                    <p class="text-left">As our project unfolded, we identified 20 sources from which to gather language. We chose an equal number of popular
-                        left- and right-leaning news media sites to scrape, and began our process of gathering human thought that has
-                        been recorded in sentences.</p>
-                    <p class="text-left">As the data began rolling in, millions of words per site, we needed to find a way to start making sense of it all.
-                        We chose a two-pronged approach. First, we would begin grouping and inspecting to look for patterns, find relationships,
-                        further direct our exploration. Second, we we wanted a machine learning model to learn what left- or right-leaning
-                        text would look like so that we could use it to identify political leanings of a text, or even build text blocks
-                        with perspective.</p>
-                    <p class="text-left">And so we got to work...</p>
-                    <!-- <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a> -->
+                    <p class="text-left">This text will be replaced by our story.  Here is a 
+                    <a href='http://www.adfontesmedia.com/wp-content/uploads/2018/01/Media-Bias-Chart_Version-3.1_Watermark-min.jpg' style="color: blue">link</a> to the media bias chart.</p>
+                    <p class="text-left">This template shares all of the same templating as the home template...</p>
+                    <p class="text-left">Including a second rendering of our team cards.</p>
+                    <p class="text-left"></p>
                 </div>
             </div>
         </div>
     </section>
-
-</body>
+    <!-- <div class='home'>
+        <a href="{{ url_for('index') }}"><h3>Back to Home</h3></a>
+    </div> -->
+{% endblock %}
+{% block footer %}
+{{super()}}
+{% endblock %}

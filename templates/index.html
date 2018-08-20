@@ -35,8 +35,8 @@
 
 </head>
 
-<body id="page-top">
-
+<body>
+  {% block content %}
   <!-- Intro Header -->
   <header class="masthead" id="top">
     <div class="intro-body">
@@ -174,6 +174,7 @@
     </div>
   </section>
   <hr>
+  {% endblock %}
   <section id="team" class="white-section">
     <div class="card-deck col-md-12 mt-3">
         
@@ -247,16 +248,20 @@
 
   <!-- Footer -->
   <footer>
+    {% block footer %}
     <div class="container-fluid">
       <div class="row">
         <div class="col-6">
-          <a class="ml-4" href="https://github.com/MAVRYK/GW-Project3.git">GitHub Repository</a>
+          <a class="ml-4 pr-4" href="https://github.com/MAVRYK/GW-Project3.git">GitHub Repository</a>
+          <a class="px-4" href="{{ url_for('about') }}">About</a>
+          <a class="px-4" href="{{ url_for('index') }}">Home</a>
         </div>
         <div class="col-6">
           <h6 class="text-right mr-4">&copy; Copyright 2018</h6>
         </div>
       </div>
     </div>
+    {% endblock %}
   </footer>
 
   <!-- JQuery -->

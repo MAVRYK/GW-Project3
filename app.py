@@ -20,6 +20,11 @@ def favicon():
 def index():
     return render_template('index.html')
 
+# about
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 #word cloud
 @app.route('/view/<word_cloud>')
 def cloud(word_cloud):
