@@ -136,7 +136,7 @@ p {
     height: 100%;
     padding: 200px 0;
     text-align: center;
-    vertical-align: text-top;
+    /* vertical-align: middle; */
     color: white;
     background: linear-gradient(
        rgba(0, 0, 0, 0.7), 
@@ -152,7 +152,7 @@ p {
   
   .masthead .intro-body {
     display: table-cell; 
-    vertical-align: top; 
+    vertical-align: middle; 
   }
   
   .masthead .intro-body .brand-heading {
