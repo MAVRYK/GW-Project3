@@ -42,11 +42,11 @@
     <div class="intro-body">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 align-middle mx-auto">
+          <div class="col-lg-8 align-middle mx-auto">
             <h1 class="brand-heading">Exploring the Divide</h1>
             <h4>Given the current political climate, and the flow of information through the power of words, 
               we wanted to explore the language between left- and right-leaning media sites.<br><br>
-              No judgment.  No agenda.  Just discovery.<br><br>
+              No judgment. No agenda. Just discovery.<br><br>
               Discover your own insights below.</h4>
             <p>Created by <a href = "https://VanessaVanG.com" target="_blank">Vanessa Van Gilder</a>,
               <a href = "https://www.linkedin.com/in/spencer-rand/" target="_blank">Spencer Rand</a>,
@@ -54,6 +54,7 @@
               <a href = "https://www.linkedin.com/in/anna-riehle/" target="_blank">Anna Riehle</a>, 
               <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a>, and 
               <a href = "https://mindthatdata.com/" target="_blank">Yegor Kryukov</a></p>
+            <p class="small">Project Information <a href="{{ url_for('about') }}">Here</a>
           </div>
         </div>
       </div>
@@ -67,9 +68,9 @@
     </figure>
     <article>
       <h2 class="text-center">Lexicography</h2>
-      <p>A word cloud views the collection of words through one dimension.  The more often a word is used in the body of work, the larger it appears in the cloud.  To reduce the noise and amplify the signal of important words, we removed basic grammatical construction words like “the,” “is,” and “of”.  The differing shades are simply for readability.</p>
-      <p>We scraped 10 left-leaning and 10 right-leaning news sites of varying bias going back to January 2017.  The cloud to the left shows the combined lexicon of both sides.  We can use this to identify topics or words that are dominating the media.</p>
-      <p>Below, we show all the left and right sites combined together and also allow for exploring each site individually.  Blue is for the left-leaning sites, red is for right-leaning sites.  What words or phrases stand out the most to you?</p>
+      <p>A word cloud views the collection of words through one dimension. The more often a word is used in the body of work, the larger it appears in the cloud. To reduce the noise we removed basic grammatical construction words like <em>the</em>, <em>is</em>, and <em>of</em>. The differing shades are simply for readability.</p>
+      <p>We scraped 10 left-leaning and 10 right-leaning news sites of varying bias going back to January 2017. The cloud to the left shows the combined lexicon of both sides. We can use this to identify topics or words that are dominating the media.</p>
+      <p>Below, we show all the left and right sites combined together and also allow for exploring each site individually. Blue is for the left-leaning sites, red is for right-leaning sites. Explore the word clouds to see which words/phrases stand out the most.</p>
       <p><br></p>
     </article> 
   </section> 
@@ -107,33 +108,28 @@
     <article>
       <h2 class="text-center">Crossing the Divide</h2>
       <p>
-        This chord diagram shows the number of times (for every 1,000 articles) each site references another through a hyperlink.
-        Hovering over the outer band illustrates the linkages between the site on which you are hovering and all other sites.
-        Hovering on a chord gives more detailed information about the links to/from a specific site.
+        This chord diagram shows the number of times (for every 1,000 articles) each site links to another site in our study. Hover on an outer band to see that site's incoming and outgoing links. Hover on a chord to see the number of links to and from a specific site.
       </p>
       <p>
-        This visualization helps discover which sites cross the divide between the left and right sides as well as the magnitude of the flow of information between the sites.
-        For example, the large arc of New Republic means they have significantly more links to other news sites.  
-        The chord connecting New Republic to Washington Post is thicker towards New Republic and thinner towards Washington Post, which means there are more links TO Washington Post and fewer links FROM Washington Post.
+        The large outer band of The New Republic means it has significantly more links to other news sites. If you look at the Washington Post, you can see there is a darker color chord in it. By hovering on it, it shows that the Post has 58 links to Politico and Politico has 104 links to the Post. The chord takes Politico's darker coloring because there are more links from it to the Post than from the Post to it. Likewise, the chord is wider towards Politico and thinner towards the Post.
       </p>
       <p>
-        We observed there were a few "hub" sites that are frequently linked to by other sites and there were some sites that linked heavily to other sites.</li>
-        We also discovered that the right was more likely to cross the divide than the left.  What other observations do you see?  
+        We observed there were a few "hub" sites that are frequently linked to by other sites and there were some sites that linked heavily to other sites. We also discovered that the right was more likely to cross the divide than the left. 
       </p>
       <p><br></p>
     </article>
   </section>  
   <hr>
   <!--Map Section-->
-  <div class="container-fluid iframe">
-    <div class="row">
+  <div class="container">
+
       <h2 class="col-lg-12 text-center mt-2 mb-4">Top 70 Country Mentions</h2>
       <p>
-        The maps below show what countries are being discussed to potentially determine if there was a preference by one side or the other.  
-        If a site mentioned a city or region, it was included in the parent country.  
-        We noticed that both sides mentioned the same top 4 countries (USA, Great Britain, Russia, Japan) with almost identical proportion percentages.
-        Are there any countries that are getting more or less coverage than you expected?        
+        We wanted to find out if the left and right were mentioning the same countries in their articles. If a site mentioned a city or region, it was included in the parent country. As expected, the US was mentioned the most often. However, as the maps below show, there isn't a significant difference between the sides.  Both sides even mentioned the same top four countries (USA, UK, Russia, Japan) with extremely similar percentages. Hover over the countries to see the details.
       </p>
+  </div>  
+  <div class="container-fluid">
+    <div class="row">
       <div class="col-lg-6">
           <iframe width="100%" height="520" frameborder="0" src="https://vanessavang.carto.com/builder/81b0b3c6-a0ca-4a77-becf-257e21052f08/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
@@ -151,8 +147,8 @@
     <article>
       <h2 class="text-center">Site Bias</h2>
       <p>
-        The following bar charts represent a sampling of phrases that resulted in a high probability of the site's bias being left or right leaning.
-        The data came from our machine learning model, which is described in more detail below.
+        We created a machine learning model and taught it the difference between left and right leaning sites using 2 million words from 200,000 article headlines.
+        These bar charts show a sampling of phrases where the site's bias has a high probability of being left of right.
       </p>
       <p><br></p>
     </article> 
@@ -165,7 +161,7 @@
     <article>
       <p><br></p>
       <p>
-        We found that each side had its own vocabulary.  For example, the phrase "illegal immigrant" was more likely to result in the site's bias being right, compared to "undocumented immigrants" for the left.
+        In some instances, we found that each side had its own vocabulary. For example the phrase <em>illegal immigrants</em> is more likely from a right news source and <em>undocumented immigrants</em> for the left.
       </p>
       <p><br></p>
     </article> 
@@ -178,7 +174,6 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h1 class="brand-heading text-center">Site Bias Predictor</h1>
-            <p class="intro-text">We created a machine learning model and taught it the difference between left and right leaning sites using 2 million words from 200,000 article headlines.</p>
             <p class="intro-text">Enter a word, a two-word phrase or a three-word phrase in the box below and our model will estimate the probability that the site is left or right leaning:</p>
             <form>
               <div class="form-group">
@@ -281,24 +276,17 @@
     {% endblock %}
   </footer>
 
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
 
-  <!--for testing outside of flask app-->
   <!-- d3 -->
   <script src='https://d3js.org/d3.v3.min.js'></script>
   <!-- Plotly library -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- scrollama -->
-  <!-- <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
-  <script src='https://unpkg.com/scrollama'></script> -->
-  
+
 </body>
 
 </html>
