@@ -34,11 +34,13 @@ p {
     }
   }
 
-/* body { */
-    /* background-color: white; */
-    /* margin: 3rem auto; */
-    /* max-width: 100%; */
-  /* } */
+header {
+  margin: 0px 0px 40px;
+  }
+
+hr {
+  margin: 20px 0px 20px;
+  }
   
   h1 {
     text-align: center;
@@ -141,8 +143,8 @@ p {
     background: linear-gradient(
        rgba(0, 0, 0, 0.7), 
        rgba(0, 0, 0, 0.7) ),
-       
-        url("https://image.ibb.co/m2o2Fz/protest_crop_wh.png") no-repeat top center;
+        /* url("https://image.ibb.co/m2o2Fz/protest_crop_wh.png") no-repeat top center; */
+        url("../img/protest-crop-wh.png") no-repeat top center;
     background-color: white;
     -webkit-background-size: auto;
     -moz-background-size: auto;
