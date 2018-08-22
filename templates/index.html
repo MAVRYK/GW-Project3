@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ super() }}{% endblock %}
 {% block head %}
   {{ super() }}
   <!-- Script for chord chart -->
@@ -28,7 +29,7 @@
               <a href = "https://www.linkedin.com/in/anna-riehle/" target="_blank">Anna Riehle</a>, 
               <a href = "https://www.linkedin.com/in/mike-hager/" target="_blank">Mike Hager</a>, and 
               <a href = "https://mindthatdata.com/" target="_blank">Yegor Kryukov</a></p>
-            <p class="small"><a href="{{ url_for('about') }}">Project Information Here</a>
+            <p class="small"><a href="{{ url_for('about') }}">Project Information</a>
           </div>
         </div>
       </div>
@@ -135,7 +136,7 @@
     <article class="mt-5 pt-5">
       <p><br></p>
       <p>
-        In some instances, we found that each side had its own vocabulary. For example the phrase <em>illegal immigrants</em> is more likely from a right news source and <em>undocumented immigrants</em> for the left.
+        In some instances, we found that each side had its own vocabulary. For example the phrase <em>illegal immigrants</em> is more likely from a right news source and <em>undocumented immigrants</em> from the left.
       </p>
       <p><br></p>
     </article> 
