@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 {% block content %}
 
 <!-- About Section -->
@@ -16,6 +16,7 @@
 </section>
 
 {% endblock %}
+{% block team %}{{ super() }}{% endblock %}
 {% block footer %}
 {{super()}}
 {% endblock %}
