@@ -1,23 +1,78 @@
 {% extends "base.html" %}
+{% block title %}About | {{ super() }}{% endblock %}
 {% block content %}
 
 <!-- About Section -->
-<section id="about" class="content-section text-center">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 text-center mt-2 mb-4">
-                <h2>Project Information</h2>
-                <p>We selected our sites using the   
-                <a class="blk-link" href='http://www.adfontesmedia.com' target = "_blank">Media Bias Chart from ad fontes media</a>.</p>
-                <!-- <p class="text-left">Image of protesters</p> -->
-                <p style="color: white;">
-                    Vanessa Van Gilder (aka Captain Bouncy), Spencer Rand (aka Rodney), 
-                    Kellie Shontz (aka Doom Unicorn),<br>Anna Riehle (aka The Wrangler),
-                    Mike Hager (aka Boss) and Yegor Kryukov (aka The Modeler)
-                </p>
-            </div>
+<section id="about" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 mt-2 mb-2 text-center">
+        <h2>Project Information</h2>
+        <p>We selected our sites using ad fontes media's <em><a class="blk-link" href='http://www.adfontesmedia.com' target = "_blank">Media Bias Chart</a></em>.</p>
+        <p>Protester Photo by <em><a class="blk-link" href='https://unsplash.com/@tchompalov' target = "_blank">Vlad Tchompalov</a></em> at <em><a class="blk-link" href='https://unsplash.com/photos/KHxxCc8XMNE' target = "_blank">Unsplash</a></em><p>
+        <hr>
+        <h4>Toolkit</h4>
         </div>
+      </div><!-- /row -->
+    <div class="row"> 
+      <div class="col-lg-4 mb-0">
+        <ul style=" list-style-type:square">
+          <p class="lead mt-2 mb-0"><strong>Languages:</strong></p>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Data Extraction: API interactions</li>
+            <li> Beautiful Soup</li>
+            <li> JSON</li>
+          <p class="lead mt-2 mb-0"><strong>Data Prep:</strong></p> 
+            <li>Jupyter Notebook</li>
+            <li> Pandas</li>
+            <li> Regex</li>
+            <li> Numpy
+          <p class="lead mt-2 mb-0">Visualization:</strong></p> 
+            <li>Plotly</li>
+            <li> ZingChart</li>
+            <li> Wordcloud</li>
+        </ul> 
+      </div>
+      <div class="col-lg-4 mb-0">
+        <ul style=" list-style-type:square">
+          <p class="lead mt-2 mb-0"><strong>Machine Learning:</strong></p> 
+            <li>Scikit-learn</li>
+          <p class="lead mt-2 mb-0">Geospatial Analysis:</strong></p> 
+            <li>CARTO</li>
+            <li> Geotext</li>
+            <li> Pycountry</li>
+          <p class="lead mt-2 mb-0">Web Development:</strong></p> 
+            <li>HTML</li>
+            <li> CSS</li>
+            <li> Bootstrap</li>
+            <li> Jinja2</li>
+            <li> Flask</li>
+            <li> Heroku</li>
+        </ul>
+      </div>
+      <div class="col-lg-4 mb-0">
+        <ul style=" list-style-type:square">
+          <p class="lead mt-2 mb-0">Database:</strong></p> 
+            <li>MongoDB</li>
+            <li> Pymongo</li>
+          <p class="lead mt-2 mb-0">Project Management:</strong></p> 
+            <li>Slack</li>
+            <li> Trello</li>
+            <li> Appear.in</li>
+            <li> Google Drive</li>
+          <p class="lead mt-2 mb-0">Version Control:</strong></p> 
+            <li>Git</li>
+            <li> GitHub</li>
+        </ul>
+      </div>
+    </div><!-- /row -->
+
+        <p style="color: white;" class="mb-0">Vanessa Van Gilder (aka Captain Bouncy), Spencer Rand (aka Rodney), Kellie Shontz (aka Doom Unicorn), Anna Riehle (aka The Wrangler), Mike Hager (aka Boss) and Yegor Kryukov (aka The Dreamer)
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
 {% endblock %}
