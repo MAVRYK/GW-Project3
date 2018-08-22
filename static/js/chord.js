@@ -34,7 +34,7 @@ Plotly.d3.json("/chord", function(error, response) {
       "angle-padding": 1,
       "band-width": 10,
       "band-space": 1,
-      "radius": 235,
+      "radius": 230,
       "color-type": "palette",
       "palette": [
         "#1F45FC",
